@@ -2,7 +2,7 @@
 export default{
   data(){
     return{
-      message:'Hello!'
+     
     }
   }
 }
@@ -21,7 +21,7 @@ export default{
                     </ul>
                 </div>
                 <div class="logo">
-                    <img src="../public/boolean-logo.png" alt="Logo-Boolean">
+                    <img src="../../public/boolean-logo.png" alt="Logo-Boolean">
                 </div>
                 <div class="menu">
                     <ul>
@@ -51,5 +51,20 @@ export default{
     
     color: white;
     padding: 12px 0;
+}
+.page-header .row{
+    justify-content: space-between;
+    align-items: center;
+   
+}
+li{
+    display: inline ;
+    padding: 0 5px;
+    
+}
+.logo{
+    max-width:150px;
+    max-height: 22px;
+    
 }
 </style>
