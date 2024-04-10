@@ -1,0 +1,48 @@
+.container{
+    width: 1024px;
+    height: auto;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.col-4{
+    
+    width: calc(4 * 100% / 12);
+    padding: 6px;
+}
+.col-4-2{
+    width: calc(4 * 100% / 12);
+    padding: 6px;
+    
+}
+.col-4-3{
+    width: calc(4 * 100% / 12);
+    padding: 6px;
+    
+}
+.col-4-4{
+    width: calc(4 * 100% / 12);
+    padding: 6px;
+    
+}
+.col-4-5{
+    width: calc(4 * 100% / 12);
+    padding: 6px;
+    
+}
+.col-4-6{
+    width: calc(4 * 100% / 12);
+    padding: 6px;
+    
+}
+.col-foot{
+    width:calc(100% / 2);
+    height: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.section{
+    padding: 32px;
+}
