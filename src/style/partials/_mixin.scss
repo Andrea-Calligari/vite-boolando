@@ -1,0 +1,17 @@
+@mixin overlay-mixin {
+    
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+	right: 0;
+	top: 0;
+	left: 0;
+    bottom: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+    transition: opacity 300ms ease-in-out; 
+	
+
+}
