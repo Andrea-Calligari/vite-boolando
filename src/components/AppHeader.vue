@@ -21,7 +21,7 @@ export default{
                     </ul>
                 </div>
                 <div class="logo">
-                    <img src="../../public/boolean-logo.png" alt="Logo-Boolean">
+                    <img src="/boolean-logo.png" alt="Logo-Boolean">
                 </div>
                 <div class="menu">
                     <ul>

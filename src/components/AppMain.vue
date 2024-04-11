@@ -2,7 +2,111 @@
 export default{
   data(){
     return{
-      message:'Hello!'
+      message:'Hello!',
+      products: [
+    {
+      id: 1,
+      frontImage: "1.webp",
+      backImage: "1b.webp",
+      brand: "Levi's",
+      name: "Relaxed Fit",
+      price: 29.99,
+      isInFavorites: true,
+      badges: [
+        {
+          type: "tag",
+          value: "Sostenibilità"
+        },
+        {
+          type: "discount",
+          value: "-50%"
+        }
+      ]
+    },
+    {
+      id: 2,
+      frontImage: "2.webp",
+      backImage: "2b.webp",
+      brand: "Guess",
+      name: "Roses Tee",
+      price: 20.99,
+      isInFavorites: true,
+      badges: [
+        {
+          type: "discount",
+          value: "-30%"
+        }
+      ]
+    },
+    {
+      id: 3,
+      frontImage: "3.webp",
+      backImage: "3b.webp",
+      brand: "Come Zucchero Filato",
+      name: "Voglia di colori pastello",
+      price: 129.99,
+      isInFavorites: false,
+      badges: [
+        {
+          type: "discount",
+          value: "-30%"
+        }
+      ]
+    },
+    {
+      id: 4,
+      frontImage: "4.webp",
+      backImage: "4b.webp",
+      brand: "Levi's",
+      name: "Tee Unisex",
+      price: 14.99,
+      isInFavorites: false,
+      badges: [
+        {
+          "type": "tag",
+          "value": "Sostenibilità"
+        },
+        {
+          "type": "discount",
+          "value": "-50%"
+        }
+      ]
+    },
+    {
+      id: 5,
+      frontImage: "5.webp",
+      backImage: "5b.webp",
+      brand: "Maya Deluxe",
+      name: "Stripe Bodice",
+      price: 99.99,
+      isInFavorites: true,
+      badges: [
+        {
+          type: "tag",
+          value: "Sostenibilità"
+        },
+        {
+          type: "discount",
+          value: "-50%"
+        }
+      ]
+    },
+    {
+      id: 6,
+      frontImage: "6.webp",
+      backImage: "6b.webp",
+      brand: "Esprit",
+      name: "Maglione - Black",
+      price: 29.99,
+      isInFavorites: true,
+      badges: [
+        {
+          type: "tag",
+          value: "Sostenibilità"
+        }
+      ]
+    }
+  ]
     }
   }
 }
@@ -14,10 +118,10 @@ export default{
     <section class="section">
             <div class="container">
                 <div class="row">
-                    <div class="col-4">
+                    <div v-for="prodObj in products"class="col-4">
                         <div class="card-product">
                             <div class="card-header">
-                                <img src="../../public/1b.webp" alt="">
+                                <img :src="prodObj.backImage" alt="">
                                 <div class="badge-red">-50%</div>
                                 <span class="badge-green">Sostenibilità</span>
                                 <div class="badge-heart">&hearts;</div>
@@ -33,12 +137,12 @@ export default{
                             </div>
                         </div>
                     </div>
-                    <div class="col-4-2">
+                    <!-- <div class="col-4-2">
                         <div class="card-product">
                             <div class="card-header">
-                                <img src="../../public/2b.webp" alt="">
+                                <img src="/2b.webp" alt="">
                                 <div class="badge-red">-30%</div>
-                                <!-- <span class="badge-green">Sostenibilità</span> -->
+                                 <span class="badge-green">Sostenibilità</span>
                                 <div class="badge-heart">&hearts;</div>
                                 <div class="overlay">
                                     <a class="btn" href="#">Comprami</a>
@@ -55,9 +159,9 @@ export default{
                     <div class="col-4-3">
                         <div class="card-product">
                             <div class="card-header">
-                                <img src="../../public/3b.webp" alt="Modello con maglia levi's">
+                                <img src="/3b.webp" alt="Modello con maglia levi's">
                                 <div class="badge-red">-30%</div>
-                                <!-- <span class="badge-green">Sostenibilità</span> -->
+                                 <span class="badge-green">Sostenibilità</span> 
                                 <div class="badge-heart">&hearts;</div>
                                 <div class="overlay">
                                     <a class="btn" href="#">Comprami</a>
@@ -80,7 +184,7 @@ export default{
                     <div class="col-4-4">
                         <div class="card-product">
                             <div class="card-header">
-                                <img src="../../public/4b.webp" alt="">
+                                <img src="/4b.webp" alt="">
                                 <div class="badge-red">-50%</div>
                                 <span class="badge-green">Sostenibilità</span>
                                 <div class="badge-heart">&hearts;</div>
@@ -99,9 +203,9 @@ export default{
                     <div class="col-4-5">
                         <div class="card-product">
                             <div class="card-header">
-                                <img src="../../public/5b.webp" alt="">
-                                <!-- <div class="badge-red">-50%</div>
-                                <span class="badge-green">Sostenibilità</span> !-->
+                                <img src="/5b.webp" alt="">
+                                <div class="badge-red">-50%</div>
+                                <span class="badge-green">Sostenibilità</span> 
                                 <div class="badge-heart">&hearts;</div> 
                                 <div class="overlay">
                                     <a class="btn" href="#">Comprami</a>
@@ -111,16 +215,16 @@ export default{
                                 <div>Maya Deluxe</div>
                                 <h3>STRIPE BODICE</h3>
                                 <div>99.99 &euro;</div>
-                                <!-- <span class="last-price">29.99 &euro;</span> -->
+                                 <span class="last-price">29.99 &euro;</span> 
                             </div>
                         </div>
                     </div> 
                     <div class="col-4-6">
                         <div class="card-product">
                             <div class="card-header">
-                                <img src="../../public/6b.webp" alt="">
+                                <img src="/6b.webp" alt="">
                                 <span class="badge-green-solo">Sostenibilità</span>
-                                <!-- <div class="badge-red">-50%</div> -->
+                                 <div class="badge-red">-50%</div> 
                                 <div class="badge-heart">&hearts;</div>
                                 <div class="overlay">
                                     <a class="btn" href="#">Comprami</a>
@@ -130,13 +234,13 @@ export default{
                                 <div>Esprit</div>
                                 <h3>MAGLIONE-BLACK</h3>
                                 <div>24.99 &euro;</div>
-                                <!-- <span class="last-price">29.99 &euro;</span> -->
+                                 <span class="last-price">29.99 &euro;</span> 
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
             </div>
-        </section>
+        </section> 
   </main>
 
 
