@@ -16,21 +16,21 @@ export default {
         <section class="section">
             <div class="container">
                 <div class="row">
-                    <div v-for="product in item" class="col-4">
+                    <div v-for="product in item" class="col-4 ">
                         <div class="card-product">
                             <div class="card-header">
-                                <img :src="product.backImage" alt="">
-                                <div class="badge-red">-50%</div>
-                                <span class="badge-green">Sostenibilità</span>
+                                <img :src="product.backImage " alt="">
+                                <div  class="badge-red">-50%</div>
+                                 <span class="badge-green">Sostenibilità</span> 
                                 <div class="badge-heart">&hearts;</div>
                                 <div class="overlay">
                                     <a class="btn" href="#">Comprami</a>
                                 </div>
                             </div>
                             <div class="card-body">
-                                <div>Levi's</div>
+                                <div>{{product.brand}}</div>
                                 <h3>RELAXED FIT TEE UNISEX</h3>
-                                <div>14.99 &euro;</div>
+                                <div>{{product.price}}&euro;</div>
                                 <span class="last-price">29.99 &euro;</span>
                             </div>
                         </div>
@@ -101,13 +101,65 @@ h3 + div{
 .last-price{
     text-decoration: line-through;
 }
-.col-4:hover .overlay{
-    opacity: 1;
-}
+
 .col-4 .overlay{
     @include overlay-mixin;
-    background-image: url('../../public/1.webp');
+    background-image: url('/1.webp');
     
  
 } 
+.col-4-2 .overlay{
+    
+    background-image: url('/2.webp');
+    @include overlay-mixin;
+
+}  
+.col-4-3 .overlay{
+
+    @include overlay-mixin;
+    background-image: url('/3.webp');
+   
+}  
+.col-4-4 .overlay{
+   
+    @include overlay-mixin;
+	background-image: url('/4.webp');
+  
+}  
+.col-4-5 .overlay{
+
+    @include overlay-mixin;
+	background-image: url('/5.webp');
+   
+}  
+.col-4-6 .overlay{
+    @include overlay-mixin;
+	background-image: url('/6.webp');
+   
+}  
+.col-4:hover .overlay{
+    opacity: 1;
+}
+ .col-4-2:hover .overlay {
+ 	opacity: 1;
+   
+ }
+ .col-4-3:hover .overlay {
+ 	opacity: 1;
+   
+    
+   
+ }
+ .col-4-4:hover .overlay {
+ 	opacity: 1;
+   
+ }
+ .col-4-5:hover .overlay {
+ 	opacity: 1;
+   
+}
+ .col-4-6:hover .overlay {
+ 	opacity: 1;
+   
+ }
 </style>

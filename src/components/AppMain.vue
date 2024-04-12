@@ -138,7 +138,7 @@ export default{
 .card-header > img{
 display: block;
 }
-.badge-red{
+.badge-discount{
     position: absolute;
     bottom: 60px;
     width: 15%;
@@ -148,7 +148,7 @@ display: block;
 	font-size: 10px;
 	padding: 0 12px;
 }
-.badge-green{
+.badge-tag{
     position: absolute;
     bottom: 60px;
     left: 50px;
@@ -182,65 +182,6 @@ h3 + div{
 .last-price{
     text-decoration: line-through;
 }
-.col-4 .overlay{
-    @include overlay-mixin;
-    background-image: url('../../public/1.webp');
-    
- 
-} 
-.col-4-2 .overlay{
-    
-    background-image: url('../../public/2.webp');
-    @include overlay-mixin;
 
-}  
-.col-4-3 .overlay{
-
-    @include overlay-mixin;
-    background-image: url('../../public/3.webp');
-   
-}  
-.col-4-4 .overlay{
-   
-    @include overlay-mixin;
-	background-image: url('../../public/4.webp');
-  
-}  
-.col-4-5 .overlay{
-
-    @include overlay-mixin;
-	background-image: url('../../public/5.webp');
-   
-}  
-.col-4-6 .overlay{
-    @include overlay-mixin;
-	background-image: url('../../public/6.webp');
-   
-}  
-.col-4:hover .overlay{
-    opacity: 1;
-}
- .col-4-2:hover .overlay {
- 	opacity: 1;
-   
- }
- .col-4-3:hover .overlay {
- 	opacity: 1;
-   
-    
-   
- }
- .col-4-4:hover .overlay {
- 	opacity: 1;
-   
- }
- .col-4-5:hover .overlay {
- 	opacity: 1;
-   
-}
- .col-4-6:hover .overlay {
- 	opacity: 1;
-   
- }
 
 </style>

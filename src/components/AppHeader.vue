@@ -25,9 +25,9 @@ export default{
                 </div>
                 <div class="menu">
                     <ul>
-                        <li>img</li>
-                        <li>img</li>
-                        <li>img</li>
+                        <li>&hearts;</li>
+                        <li>&hearts;</li>
+                        <li>&hearts;</li>
                     </ul>
                 </div>
             </div>
